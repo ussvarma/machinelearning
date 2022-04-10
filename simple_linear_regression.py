@@ -7,7 +7,7 @@ Original file is located at
     https://colab.research.google.com/drive/1GQDemJ6EwLo9LJQBddaKKMKkoCXlaVDy
 
 # Simple Linear Regression
-    which aims to predict continous outputs
+    which aims to predict continuous outputs
 
 ##Assumptions of a linear regression :
   1.Linearity
