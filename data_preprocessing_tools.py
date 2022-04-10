@@ -29,7 +29,7 @@ x[:, 1:3] = imputer.fit_transform(x[:, 1:3])
 
 """## Encoding categorical data"""
 
-print(x)
+print("x:",x)
 
 """#### otherways of encoding technique
 
@@ -61,19 +61,20 @@ from sklearn.preprocessing import LabelEncoder
 le = LabelEncoder()
 y = le.fit_transform(y)
 
+
 """## Splitting the dataset into the Training set and Test set"""
 
 from sklearn.model_selection import train_test_split
 
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=1)  # order is important
 
-print(x_train)
+print("x_train:",x_train)
 
-print(x_test)
+print("x_test",x_test)
 
-print(y_train)
+print("y_train",y_train)
 
-print(y_test)
+print("y_test",y_test)
 
 """## Feature Scaling"""
 
@@ -83,9 +84,9 @@ sc = StandardScaler()
 x_train[:, 3:] = sc.fit_transform(x_train[:, 3:])
 x_test[:, 3:] = sc.transform(x_test[:, 3:])
 
-x_train
+print("x_train",x_train)
 
-x_test
+print("x_test",x_test)
 
 """#Notes
    
