@@ -1,4 +1,3 @@
-# coding: utf-8
 
 # Problem Statement:
 # Predict whether the cancer is benign or malignant
@@ -33,6 +32,7 @@ plt.title("malignant and benign ")
 plt.scatter(m.radius_mean, m.texture_mean, color="red", label="malignant")
 plt.scatter(b.radius_mean, b.texture_mean, color="blue", label="malignant")
 plt.legend()
+plt.show()
 
 # Data preprocessing technique
 # label  encoding technique
