@@ -59,9 +59,8 @@ for features, label in training_data[1:]:
     y.append(label)
 print(X)
 
-y = np.array(y)
+y = np.array(y)  # converting into array
 print(y.shape)
-
 
 from sklearn.model_selection import train_test_split
 
@@ -80,14 +79,13 @@ from sklearn.svm import SVC
 svc = SVC(random_state=0, )
 svc.fit(x_train, y_train)
 
-
 y_pred = svc.predict(x_test)
 y_pred = np.reshape(y_pred, (-1, 1))
 np.concatenate((y_test.reshape(-1, 1), y_pred.reshape(-1, 1)), axis=1)
 
 from sklearn.metrics import classification_report
 
-print(classification_report(y_test, y_pred))
+print("svm model:",classification_report(y_test, y_pred))
 
 # Logistic Regression model
 
@@ -103,7 +101,7 @@ np.concatenate((y_test.reshape(-1, 1), y_pred.reshape(-1, 1)), axis=1)
 
 from sklearn.metrics import classification_report
 
-print(classification_report(y_test, y_pred))
+print("logistic regression:",classification_report(y_test, y_pred))
 
 # KNN mdoel
 
@@ -113,15 +111,13 @@ from sklearn.neighbors import KNeighborsClassifier
 NN = KNeighborsClassifier()
 NN.fit(x_train, y_train)
 
-
 y_pred = NN.predict(x_test)
 y_pred = np.reshape(y_pred, (1495, 1))
 np.concatenate((y_test.reshape(-1, 1), y_pred.reshape(-1, 1)), axis=1)
 
-
 from sklearn.metrics import classification_report
 
-print(classification_report(y_test, y_pred))
+print("Nearest neighbours:",classification_report(y_test, y_pred))
 
 # Naive Bayes model
 
@@ -145,11 +141,9 @@ np.concatenate((y_test.reshape(-1, 1), y_pred.reshape(-1, 1)), axis=1)
 
 from sklearn.metrics import classification_report
 
-print(classification_report(y_test, y_pred))
+print("Naive Bayes:",classification_report(y_test, y_pred))
 
-# # Decision Tree Model
-
-# In[24]:
+#  Decision Tree Model
 
 
 from sklearn.tree import DecisionTreeClassifier
@@ -157,19 +151,15 @@ from sklearn.tree import DecisionTreeClassifier
 dtc = DecisionTreeClassifier()
 dtc.fit(x_train, y_train)
 
-# In[25]:
-
 
 y_pred = dtc.predict(x_test)
 y_pred = np.reshape(y_pred, (1495, 1))
 np.concatenate((y_test.reshape(-1, 1), y_pred.reshape(-1, 1)), axis=1)
 
-# In[26]:
-
 
 from sklearn.metrics import classification_report
 
-print(classification_report(y_test, y_pred))
+print("Desicion tree :",classification_report(y_test, y_pred))
 
 # # Random Forest Model
 
@@ -181,20 +171,13 @@ from sklearn.ensemble import RandomForestClassifier  # importing randomforestcla
 rf = RandomForestClassifier(random_state=0, n_jobs=-1)
 rf.fit(x_train, y_train)
 
-# In[28]:
-
-
 y_pred = rf.predict(x_test)
 y_pred = np.reshape(y_pred, (1495, 1))
 np.concatenate((y_test.reshape(-1, 1), y_pred.reshape(-1, 1)), axis=1)
 
-# In[29]:
-
 
 from sklearn.metrics import classification_report
 
-print(classification_report(y_test, y_pred))
+print("Random forest:",classification_report(y_test, y_pred))
 
-# # Observation:
-# 
-# ### Both SVC and Random forest model did better
+# Observation: Both SVC and Random forest model did better than others.
