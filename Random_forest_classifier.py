@@ -1,4 +1,4 @@
-# importing dataset from sklearn library
+# import dataset from sklearn library
 from sklearn.datasets import make_classification
 
 x, y = make_classification(n_samples=1000, n_features=4,
