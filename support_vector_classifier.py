@@ -82,7 +82,7 @@ def sklearn(kernels, gammas):
 kernels = ["linear", "rbf", "sigmoid", "poly"]
 gammas = [10, 100]
 sklearn(kernels,gammas)
-"""## Observation:
+"""## Observations:
 
 1.model which has kernel="rbf" and gamma=10 gives better result
 """
