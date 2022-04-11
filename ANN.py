@@ -80,4 +80,4 @@ print(cm)
 print("accuracy:score", accuracy_score(y_test, y_pred))
 
 #  Observation:
-# 1.Even after adding dropout layer still model is overfitted.
+# 1.Even after adding dropout layer still model is over fitted.
